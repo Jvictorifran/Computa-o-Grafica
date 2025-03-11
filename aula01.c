@@ -22,7 +22,7 @@ int main(int argc, char** argv) {
     return 0;
 }
 
-/*void desenha(void) {
+void desenha(void) {
     glClear(GL_COLOR_BUFFER_BIT);
 
     glColor3f(1, 0, 0);
@@ -35,7 +35,7 @@ int main(int argc, char** argv) {
     glEnd();
 
     glFlush();
-}*/
+}
 
 void atualiza(int value) {
    xOffset += stepx;
