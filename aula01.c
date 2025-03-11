@@ -3,8 +3,8 @@
 void desenha(void);
 void atualiza(int value);
 
-//float xOffset = 0.0f;
-//float stepx= 0.01f;  // Velocidade do movimento
+float xOffset = 0.0f;
+float stepx= 0.01f;  // Velocidade do movimento
 float yoffset = 0.0f;
 float stepy = 0.01f;
 int main(int argc, char** argv) {
@@ -38,12 +38,12 @@ int main(int argc, char** argv) {
 }*/
 
 void atualiza(int value) {
-   // xOffset += step;
+   xOffset += stepx;
     yoffset += stepy;
-    // Se atingir os limites da tela, inverte a direção do movimento
-   // if (xOffset > 0.5f || xOffset < -0.5f) {
-      //  step = -step;  // Inverte o sentido do movimento
-   // }
+   //Se atingir os limites da tela, inverte a direção do movimento
+   if (xOffset > 0.5f || xOffset < -0.5f) {
+    stepx = -stepx;  // Inverte o sentido do movimento
+    }
     if (yoffset > 0.5f || yoffset < -0.5f){
       stepy = -stepy;
     }
